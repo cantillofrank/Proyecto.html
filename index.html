@@ -4,18 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        nav {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 35px;
+        }
+
+        main {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
 
+    <nav>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
     <header>
         <h1>Mi Portafolio</h1>
-        <p>Hola, Soy Frank Cantillo Lopez y este es un pequeño avance de mi portafolio web.</p>
+        <p>Hola, soy Frank Cantillo Lopez y este es un pequeño avance de mi portafolio web.</p>
     </header>
 
     <main>
 
-        <section>
+        <section id="sobre-mi">
             <h2>Sobre mí</h2>
             <p>
                 Actualmente estoy aprendiendo sobre desarrollo web y programación.
@@ -23,7 +81,7 @@
             </p>
         </section>
 
-        <section>
+        <section id="proyectos">
             <h2>Mis proyectos</h2>
             <p>Estos son algunos proyectos que iré agregando a mi portafolio:</p>
 
@@ -33,7 +91,17 @@
             </ul>
         </section>
 
-        <section>
+        <section id="habilidades">
+            <h2>Mis habilidades</h2>
+
+            <ul>
+                <li>HTML básico</li>
+                <li>CSS básico</li>
+                <li>Programación en proceso de aprendizaje</li>
+            </ul>
+        </section>
+
+        <section id="contacto">
             <h2>Contacto</h2>
             <p>Próximamente agregaré mis datos de contacto.</p>
         </section>
@@ -45,4 +113,5 @@
     </footer>
 
 </body>
+                                                            
 </html>
