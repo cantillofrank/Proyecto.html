@@ -39,7 +39,6 @@ export const personalData = {
     {
       id: 1,
       titulo: "Portafolio Personal",
-
       categoria: "React",
       descripcion: "Desarrollo de un portafolio interactivo utilizando React y Vite para presentar trabajos académicos y proyectos personales.",
       tecnologias: ["React", "Vite", "CSS"],
@@ -67,6 +66,6 @@ export const personalData = {
 
   contacto: {
     email: "cantillofrank43@gmail.com",
-    github: "https://github.com/cantillofrank",
+    github: "https://github.com/cantillofrank"
   }
 };
