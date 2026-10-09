@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { personalData } from './data/portfolioData'
+// Ruta corregida según tu estructura de archivos
+import { personalData } from './portafolio'
 import './App.css'
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
             className="theme-toggle-btn"
             onClick={() => setDarkMode(!darkMode)}
           >
-            {darkMode ? ' Claro' : ' Oscuro'}
+            {darkMode ? '☀️ Claro' : '🌙 Oscuro'}
           </button>
         </nav>
       </header>
@@ -130,7 +131,7 @@ function App() {
           {proyectosFiltrados.map((proyecto) => (
             <article key={proyecto.id} className="project-card">
               <div className="card-header">
-                <span className="card-tag">{proyecto.materia}</span>
+                <span className="card-tag">{proyecto.materia || 'Proyecto'}</span>
               </div>
               <h3 className="card-title">{proyecto.titulo}</h3>
               <p className="card-description">{proyecto.descripcion}</p>
@@ -168,7 +169,7 @@ function App() {
             </div>
           </a>
 
-          <a href={personalData.contacto.linkedin} target="_blank" rel="noopener noreferrer" className="contact-card">
+          <a href={personalData.contacto.github} target="_blank" rel="noopener noreferrer" className="contact-card">
             <span className="contact-icon">💼</span>
             <div>
               <strong>LinkedIn</strong>
@@ -179,7 +180,7 @@ function App() {
           <a href={`mailto:${personalData.contacto.email}`} className="contact-card">
             <span className="contact-icon">✉️</span>
             <div>
-              <strong>Correo Institucional</strong>
+              <strong>Correo Electrónico</strong>
               <p>{personalData.contacto.email}</p>
             </div>
           </a>
