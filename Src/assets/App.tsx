@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 // Ruta corregida según tu estructura de archivos
-import { personalData } from './portafolio'
+import { personalData } from './data/portafolio'
 import './App.css'
 
 function App() {
