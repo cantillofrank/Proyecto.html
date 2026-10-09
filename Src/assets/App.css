@@ -1,20 +1,8 @@
-
-/* RESET & VARIABLES GENERALES */
-:root {
-  --bg-dark: #0b1120;
-  --bg-card: #1e293b;
-  --bg-card-hover: #334155;
-  --primary: #38bdf8;
-  --primary-hover: #0284c7;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --border: rgba(255, 255, 255, 0.08);
-  --radius: 12px;
-}
 /* VARIABLES BASE (TEMA OSCURO POR DEFECTO) */
 :root {
   --bg-dark: #0b1120;
   --bg-card: #1e293b;
+  --bg-card-hover: #334155;
   --primary: #38bdf8;
   --primary-hover: #0284c7;
   --text-main: #f8fafc;
@@ -27,6 +15,7 @@
 [data-theme='light'] {
   --bg-dark: #f8fafc;
   --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
   --primary: #0284c7;
   --primary-hover: #0369a1;
   --text-main: #0f172a;
@@ -41,6 +30,12 @@ body {
   margin: 0;
   padding: 0;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.portfolio-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 /* BOTÓN PARA CAMBIAR DE TEMA */
@@ -60,20 +55,6 @@ body {
 
 .theme-toggle-btn:hover {
   border-color: var(--primary);
-}
-
-body {
-  background-color: var(--bg-dark);
-  color: var(--text-main);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.portfolio-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
 }
 
 /* 1. NAVEGACIÓN */
@@ -129,7 +110,7 @@ body {
   font-size: 2.75rem;
   font-weight: 800;
   margin: 0 0 12px 0;
-  line-height: 1.2; /* Soluciona el choque de textos */
+  line-height: 1.2;
 }
 
 .hero-subtitle {
@@ -151,6 +132,34 @@ body {
   max-width: 680px;
   line-height: 1.6;
   margin-bottom: 32px;
+}
+
+/* METRICAS / STATS */
+.stats-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  text-align: left;
+}
+
+.stat-card h4 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+.stat-card p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 4px 0 0;
 }
 
 /* SKILLS CHIPS */
@@ -233,6 +242,33 @@ body {
   margin: 0 0 32px 0;
 }
 
+/* FILTROS DE PROYECTOS */
+.filter-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--primary);
+  color: #0f172a;
+  border-color: var(--primary);
+  font-weight: 600;
+}
+
 /* TARJETAS DE PROYECTOS (GRID) */
 .projects-grid {
   display: grid;
@@ -303,92 +339,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* 4. CONTACTO */
-.contact-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
-}
-
-.contact-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  padding: 20px;
-  border-radius: var(--radius);
-  text-decoration: none;
-  color: var(--text-main);
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  transition: border-color 0.2s;
-}
-
-.contact-card:hover {
-  border-color: var(--primary);
-}
-
-.contact-icon {
-  font-size: 1.5rem;
-}
-
-.contact-card strong {
-  display: block;
-  font-size: 1rem;
-}
-
-.contact-card p {
-  margin: 0;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-.footer {
-  text-align: center;
-  padding: 40px 0;
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  border-top: 1px solid var(--border);
-}
-
-/* RESPONSIVE */
-@media (max-width: 640px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-  .navbar {
-    flex-direction: column;
-    gap: 16px;
-  }
-}
-
-/* METRICAS / STATS */
-.stats-container {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 28px;
-  flex-wrap: wrap;
-}
-
-.stat-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  padding: 12px 20px;
-  border-radius: var(--radius);
-  text-align: left;
-}
-
-.stat-card h4 {
-  font-size: 1.5rem;
-  color: var(--primary);
-  margin: 0;
-}
-
-.stat-card p {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  margin: 4px 0 0;
-}
-
 /* TIMELINE (EDUCACIÓN) */
 .timeline {
   display: flex;
@@ -448,29 +398,60 @@ body {
   line-height: 1.5;
 }
 
-/* FILTROS DE PROYECTOS */
-.filter-container {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 24px;
-  flex-wrap: wrap;
+/* 4. CONTACTO */
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
 }
 
-.filter-btn {
+.contact-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  color: var(--text-muted);
-  padding: 8px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 0.85rem;
-  transition: all 0.2s ease;
+  padding: 20px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: border-color 0.2s;
 }
 
-.filter-btn:hover,
-.filter-btn.active {
-  background: var(--primary);
-  color: #0f172a;
+.contact-card:hover {
   border-color: var(--primary);
-  font-weight: 600;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+}
+
+.contact-card strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.contact-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
